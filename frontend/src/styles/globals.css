@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f17;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --accent: #3b82f6;
+}
+
+body {
+  background: var(--bg);
+  color: #e5e7eb;
+  font-feature-settings: "tnum";
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #374151;
+  border-radius: 12px;
+}
+
+.panel {
+  background: var(--panel-2);
+}
+
+.badge {
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sev-critical { background: #450a0a; color: #fda4af; }
+.sev-high { background: #431407; color: #fdba74; }
+.sev-medium { background: #422006; color: #fde047; }
+.sev-low { background: #0c4a6e; color: #7dd3fc; }
+.sev-info { background: #1f2937; color: #9ca3af; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+
+th {
+  font-weight: 600;
+  color: #9ca3af;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.risk-gauge {
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-active {
+  border-bottom: 2px solid #3b82f6;
+  color: white;
+}
+
+.metric {
+  font-variant-numeric: tabular-nums;
+}

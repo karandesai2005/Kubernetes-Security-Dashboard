@@ -25,5 +25,11 @@ deploy-dev: ## Deploy to dev cluster
 deploy-prod: ## Deploy to prod cluster
 	kubectl apply -k k8s/overlays/prod
 
-seed: ## Seed mock data for local dev
+seed: ## Seed mock data for local dev (backend must be up)
 	python scripts/seed-mock-data.py
+
+dev-up: ## Alias
+	docker compose up --build
+
+logs: ## Tail logs
+	docker compose logs -f --tail=80
